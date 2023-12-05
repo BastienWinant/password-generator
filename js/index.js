@@ -86,6 +86,7 @@ function generatePassword() {
   let passwordLength = parseInt(passwordLengthInput.value);
   let password = "";
 
+  // check if the password length is in range
   if ((isNaN(passwordLength)) || (passwordLength < minLength) || (passwordLength > maxLength)) {
     // display error message in the html
     errorMessage.classList.remove("no-display");
