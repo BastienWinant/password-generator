@@ -26,6 +26,10 @@
   opacity: .5;
 }
 
+.no-display {
+  display: none;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -111,6 +115,7 @@ hr {
   /* cursor */
   cursor: pointer;
 }
+
 .password-options {
   /* sizing and spacing */
   margin-top: 15px;
@@ -119,6 +124,12 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.error-alert {
+  color: white;
+  background-color: orangered;
+  border-radius: 6px;
 }
 
 .password-containers {
@@ -133,8 +144,6 @@ hr {
   /* content layout */
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 10px;
 }
 
 .password-field {
@@ -144,6 +153,7 @@ hr {
 
 .password-action {
   /* sizing and spacing */
+  margin: 0 10px;
   width: 20px;
   height: 20px;
 

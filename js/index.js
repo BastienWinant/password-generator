@@ -14,6 +14,11 @@ const specChars = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","
 let darkMode = false;
 const darkmodeToggle = document.querySelector(".darkmode-switch");
 
+const maxLength = 20;
+const minLength = 1;
+
+const errorMessage = document.querySelector(".error-alert");
+
 function switchDarkmode() {
   darkMode = !darkMode;
 
@@ -37,17 +42,22 @@ function generatePassword() {
 
   let passwordLength = parseInt(passwordLengthInput.value);
   let password = "";
+  
+  if ((isNaN(passwordLength)) || (passwordLength < minLength) || (passwordLength > maxLength)) {
+    errorMessage.classList.remove("no-display");
+    return password;
+  }
 
-  if (!((isNaN(passwordLength)) || (passwordLength <= 0) || (passwordLength > 20))) {
-    for (let i = 0; i < passwordLength; i++) {
-      password += characters[Math.floor(characters.length * Math.random())];
-    }
+  for (let i = 0; i < passwordLength; i++) {
+    password += characters[Math.floor(characters.length * Math.random())];
   }
 
   return password;
 }
 
 function newPassword() {
+  errorMessage.classList.add("no-display");
+
   for (let i = 0; i < passwordFields.length; i++) {
     passwordFields[i].textContent = generatePassword();
   }
