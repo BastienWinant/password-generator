@@ -1,20 +1,6 @@
-.black-border {
+.black-border  {
   border: 1px solid black;
   box-sizing: border-box;
-}
-
-:root {
-  --black: #1C1C1C;
-
-  --dark-blue: #1F2937;
-  --light-blue: #273549;
-
-  --dark-green: #10B981;
-  --neon-green: #5DEF92;
-  --light-green: #ECFDF5;
-
-  --dark-grey: #6B7280;
-  --light-grey: #D5D4D8;
 }
 
 /* UTILITY CLASSES */
@@ -30,88 +16,99 @@
   box-sizing: border-box;
 }
 
-.medium-opacity {
-  opacity: .5;
-}
-
-/* GENERIC CLASSES */
-body {
-  background-color: var(--black);
-}
-
-.text-content {
-  /* content layout */
+.centered-content {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* styling */
-  border-radius: 6px;
-  /* border: none; */
-
-  /* text */
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
 }
 
-main {
-  position: relative;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  /* spacing and sizing */
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* GENERIC CLASSES */
+main {
+  /* sizing and spacing */
   width: 90vw;
   max-width: 550px;
-  margin: 64px auto;
-  padding: 115px 52px;
+  margin: auto;
 
   /* content layout */
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  align-items: stretch;
+  gap: 35px;
+}
 
-  /* styling */
-  background-color: var(--light-grey);
+button {
+  cursor: pointer;
+}
+
+label {
+  /* content layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+button {
+  /* sizing and spacing */
+  height: 52px;
+  width: 191px;
 }
 
 hr {
   width: 100%;
   height: 0;
-  border-top: 1px solid black; 
-}
-
-.btn {
-  /* spacing and sizing */
-  width: 191px;
-  height: 42px;
-
-  /* cursor */
-  cursor: pointer;
+  border: none;
+  border-top: 1px solid black;
 }
 
 /* CONTENT SPECIFIC CLASSES */
-.toggle-icon {
-  /* sizing and spacing */
-  height: 20px;
-  width: 20px;
-
-  /* positioning */
-  position: absolute;
-  top: 52px;
-  left: 52px;
-
-  /* cursor */
-  cursor: pointer;
+.password-options {
+  /* content layout */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.password-section {
+.password-containers {
   /* content layout */
   display: grid;
   grid-auto-rows: 39px;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px 24px;
+  grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
+  gap: 24px;
 }
 
 .password-container {
+  /* content layout */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.password-field {
+  height: 100%;
   width: 100%;
-  height: 39px;
+}
+
+.password-action {
+  /* sizing and spacing */
+  width: 20px;
+  height: 20px;
 }
