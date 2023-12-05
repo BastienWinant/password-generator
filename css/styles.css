@@ -52,6 +52,8 @@ body {
 }
 
 main {
+  position: relative;
+
   /* spacing and sizing */
   width: 90vw;
   max-width: 550px;
@@ -77,6 +79,21 @@ hr {
   /* spacing and sizing */
   width: 191px;
   height: 42px;
+
+  /* cursor */
+  cursor: pointer;
+}
+
+/* CONTENT SPECIFIC CLASSES */
+.toggle-icon {
+  /* sizing and spacing */
+  height: 20px;
+  width: 20px;
+
+  /* positioning */
+  position: absolute;
+  top: 20px;
+  left: 20px;
 
   /* cursor */
   cursor: pointer;

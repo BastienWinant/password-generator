@@ -1,8 +1,13 @@
 const passwordContainers = document.querySelectorAll(".password-container");
-console.log(passwordContainers);
+let darkMode = false;
 
 function generatePasswords() {
   console.log("Generating passwords...")
+}
+
+function switchMode() {
+  console.log("Switching the mode");
+  darkMode = !darkMode;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
