@@ -30,11 +30,15 @@
   box-sizing: border-box;
 }
 
+.medium-opacity {
+  opacity: .5;
+}
+
+/* GENERIC CLASSES */
 body {
   background-color: var(--black);
 }
 
-/* GENERIC CLASSES */
 .text-content {
   /* content layout */
   display: flex;
@@ -92,8 +96,8 @@ hr {
 
   /* positioning */
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 52px;
+  left: 52px;
 
   /* cursor */
   cursor: pointer;
