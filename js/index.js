@@ -7,8 +7,8 @@ const rs = getComputedStyle(r);
 const passwordFields = document.querySelectorAll(".password-field")
 
 // password options
-const includeNumbersInput = document.querySelector("#include-numbers");
-const includeSpecCharsInput = document.querySelector("#include-special-chars");
+let includeNumbers = true;
+let includeSpecialChars = true;
 const passwordLengthInput = document.querySelector("#length");
 
 // range for password length
@@ -46,16 +46,40 @@ function switchDarkmode() {
   }
 }
 
+function toggleCheckbox(obj) {
+  const objectID = obj.id;
+
+  if (objectID === "include-numbers") {
+    includeNumbers = !includeNumbers;
+
+    if (includeNumbers) {
+      obj.classList.remove("empty-background");
+    } else {
+      obj.classList.add("empty-background");
+    }
+  } else if (objectID === "include-special-chars") {
+    includeSpecialChars = !includeSpecialChars;
+
+    if (includeSpecialChars) {
+      obj.classList.remove("empty-background");
+      obj.textContent = "X";
+    } else {
+      obj.classList.add("empty-background");
+      obj.textContent = "";
+    }
+  }
+}
+
 // creates password as random string of characters
 // returns an empty string if password length is not in range
 function generatePassword() {
   let characters = [...letters];
 
-  if (includeNumbersInput.checked) {
+  if (includeNumbers) {
     characters.push(...numbers);
   }
 
-  if (includeSpecCharsInput.checked) {
+  if (includeSpecialChars) {
     characters.push(...specChars);
   }
 

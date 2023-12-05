@@ -7,20 +7,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Karla:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body class="no-margin">
-    <main class="bbox black-border">
+    <main class="bbox">
       <i class="darkmode-switch fa-solid fa-circle-half-stroke" onclick="switchDarkmode()"></i>
       <header>
         <h1 class="no-margin">Generate a <span>random password</span></h1>
         <p class="tagline no-margin">Never use an insecure password again.</p>
       </header>
       <section class="password-options">
-        <label>Include numbers (0-9)<input id="include-numbers" class="input no-margin black-border" type="checkbox" id="numbers" name="include" value="numbers" checked /></label>
-        <label>Include special characters<input id="include-special-chars" class="input no-margin black-border" type="checkbox" id="special-chars" name="include" value="special-chars" checked /></label>
-        <label>Password length<input id="length" class="input black-border" type="number" value="12" /></label>
+        <div class="option">
+          <p class="no-margin label">Include numbers (0-9)</p>
+          <div id="include-numbers" class="checkbox bbox centered-content" onclick="toggleCheckbox(this)">X</div>
+        </div>
+        <div class="option">
+          <p class="no-margin label">Include special characters</p>
+          <div id="include-special-chars" class="checkbox bbox centered-content" onclick="toggleCheckbox(this)">X</div>
+        </div>
+        <label class="option">Password length<input id="length" class="input" type="number" value="12" /></label>
       </section>
       <section>
         <button onclick="newPassword()">Generate passwords</button>
@@ -29,13 +35,13 @@
         <p>Password must be between 1 and 12 characters long</p>
       </section>
       <hr>
-      <section class="password-containers black-border">
-        <div class="password-container bbox black-border">
-          <div class="password-field centered-content black-border"></div>
+      <section class="password-containers">
+        <div class="password-container bbox">
+          <div class="password-field centered-content"></div>
           <i class="password-action fa-solid fa-copy invisible" onclick="copyToClipboard(this)"></i>
         </div>
-        <div class="password-container bbox black-border">
-          <div class="password-field centered-content black-border"></div>
+        <div class="password-container bbox">
+          <div class="password-field centered-content"></div>
           <i class="password-action fa-solid fa-copy invisible" onclick="copyToClipboard(this)"></i>
         </div>
       </section>
