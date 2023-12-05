@@ -11,6 +11,7 @@
   </head>
   <body class="no-margin">
     <main class="bbox black-border">
+      <img class="darkmode-switch" onclick="switchDarkmode()" src="fontawesome-free-6.5.1-web/svgs/solid/lightbulb.svg" />
       <header>
         <h1 class="no-margin">Generate a random password</h1>
         <p class="no-margin">Never use an insecure password again.</p>
@@ -27,13 +28,13 @@
       <section class="password-containers black-border">
         <div class="password-container bbox black-border">
           <div class="password-field centered-content black-border"></div>
-          <img class="password-action" src="fontawesome-free-6.5.1-web/svgs/solid/eye-slash.svg" alt="eye-icon" />
-          <img class="password-action" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
+          <img class="password-action medium-opacity" src="fontawesome-free-6.5.1-web/svgs/solid/eye-slash.svg" alt="eye-icon" />
+          <img class="password-action medium-opacity" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
         </div>
         <div class="password-container bbox black-border">
           <div class="password-field centered-content black-border"></div>
-          <img class="password-action" src="fontawesome-free-6.5.1-web/svgs/solid/eye-slash.svg" alt="eye-icon" />
-          <img class="password-action" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
+          <img class="password-action medium-opacity"  src="fontawesome-free-6.5.1-web/svgs/solid/eye-slash.svg" alt="eye-icon" />
+          <img class="password-action medium-opacity" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
         </div>
       </section>
     </main>

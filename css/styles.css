@@ -22,6 +22,10 @@
   justify-content: center;
 }
 
+.medium-opacity {
+  opacity: .5;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -40,12 +44,15 @@ main {
   width: 90vw;
   max-width: 550px;
   margin: auto;
+  padding: 115px 52px;
 
   /* content layout */
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 35px;
+
+  position: relative;
 }
 
 button {
@@ -60,9 +67,21 @@ label {
 }
 
 input {
+  /* sizing and spacing */
   height: 20px;
   width: 20px;
+
+  /* styling */
+  border-radius: 2px;
+}
+
+input[type="number"] {
+  width: 40px;
   text-align: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
 }
 
 button {
@@ -79,7 +98,23 @@ hr {
 }
 
 /* CONTENT SPECIFIC CLASSES */
+.darkmode-switch {
+  /* positioning */
+  position: absolute;
+  top: 52px;
+  left: 52px;
+
+  /* sizing and spacing */
+  width: 20px;
+  height: 20px;
+
+  /* cursor */
+  cursor: pointer;
+}
 .password-options {
+  /* sizing and spacing */
+  margin-top: 15px;
+
   /* content layout */
   display: flex;
   flex-direction: column;
@@ -90,7 +125,7 @@ hr {
   /* content layout */
   display: grid;
   grid-auto-rows: 39px;
-  grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(209px, 1fr));
   gap: 24px;
 }
 
@@ -111,4 +146,7 @@ hr {
   /* sizing and spacing */
   width: 20px;
   height: 20px;
+
+  /* cursor */
+  cursor: pointer;
 }
