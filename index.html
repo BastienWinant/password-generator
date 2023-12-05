@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap" rel="stylesheet">
   </head>
   <body class="no-margin">
     <main class="bbox black-border">
       <img class="darkmode-switch" onclick="switchDarkmode()" src="fontawesome-free-6.5.1-web/svgs/solid/lightbulb.svg" />
       <header>
-        <h1 class="no-margin">Generate a random password</h1>
-        <p class="no-margin">Never use an insecure password again.</p>
+        <h1 class="no-margin">Generate a <span>random password</span></h1>
+        <p class="tagline no-margin">Never use an insecure password again.</p>
       </header>
       <section class="password-options">
         <label class="black-border">include numbers (0-9)<input id="include-numbers" class="input no-margin black-border" type="checkbox" id="numbers" name="include" value="numbers" checked /></label>
@@ -25,7 +25,7 @@
         <button onclick="newPassword()">Generate passwords</button>
       </section>
       <section class="error-alert centered-content no-display">
-        <p>Password length must be between 1 and 20 characters.</p>
+        <p>Password must be between 1 and 12 characters long</p>
       </section>
       <hr>
       <section class="password-containers black-border">
@@ -35,7 +35,7 @@
         </div>
         <div class="password-container bbox black-border">
           <div class="password-field centered-content black-border"></div>
-          <img class="password-action medium-opacity" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
+          <img class="password-action" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" />
         </div>
       </section>
     </main>
