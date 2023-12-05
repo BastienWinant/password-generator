@@ -17,6 +17,7 @@
   --light-grey: #D5D4D8;
 }
 
+/* UTILITY CLASSES */
 .no-margin {
   margin: 0 !important;
 }
@@ -31,4 +32,65 @@
 
 body {
   background-color: var(--black);
+}
+
+/* GENERIC CLASSES */
+.text-content {
+  /* content layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* styling */
+  border-radius: 6px;
+  /* border: none; */
+
+  /* text */
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+main {
+  /* spacing and sizing */
+  width: 90vw;
+  max-width: 550px;
+  margin: 64px auto;
+  padding: 115px 52px;
+
+  /* content layout */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  /* styling */
+  background-color: var(--light-grey);
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid black; 
+}
+
+.btn {
+  /* spacing and sizing */
+  width: 191px;
+  height: 42px;
+
+  /* cursor */
+  cursor: pointer;
+}
+
+.password-section {
+  /* content layout */
+  display: grid;
+  grid-auto-rows: 39px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px 24px;
+}
+
+.password-container {
+  width: 100%;
+  height: 39px;
 }
