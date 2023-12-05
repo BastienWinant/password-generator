@@ -7,12 +7,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Karla:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body class="no-margin">
     <main class="bbox black-border">
-      <!-- <img class="darkmode-switch" onclick="switchDarkmode()" src="fontawesome-free-6.5.1-web/svgs/solid/lightbulb.svg" /> -->
       <i class="darkmode-switch fa-solid fa-circle-half-stroke" onclick="switchDarkmode()"></i>
       <header>
         <h1 class="no-margin">Generate a <span>random password</span></h1>
@@ -26,20 +25,18 @@
       <section>
         <button onclick="newPassword()">Generate passwords</button>
       </section>
-      <section class="error-alert centered-content no-display">
+      <section class="error-alert centered-content bbox no-display">
         <p>Password must be between 1 and 12 characters long</p>
       </section>
       <hr>
       <section class="password-containers black-border">
         <div class="password-container bbox black-border">
           <div class="password-field centered-content black-border"></div>
-          <!-- <img class="password-action medium-opacity" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" /> -->
-          <i class="password-action fa-solid fa-copy" onclick="copyToClipboard(this)"></i>
+          <i class="password-action fa-solid fa-copy invisible" onclick="copyToClipboard(this)"></i>
         </div>
         <div class="password-container bbox black-border">
           <div class="password-field centered-content black-border"></div>
-          <!-- <img class="password-action" onclick="copyToClipboard(this)" src="fontawesome-free-6.5.1-web/svgs/solid/copy.svg" alt="copy-icon" /> -->
-          <i class="password-action fa-solid fa-copy" onclick="copyToClipboard(this)"></i>
+          <i class="password-action fa-solid fa-copy invisible" onclick="copyToClipboard(this)"></i>
         </div>
       </section>
     </main>

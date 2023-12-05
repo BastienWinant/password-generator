@@ -7,10 +7,10 @@
   --background-black: #1C1C1C;
   --container-background: #ECFDF5;
   --green: #10B981;
-  --text-black: #2B283A;
+  --title-text: #2B283A;
   --tagline-grey: #6B7280;
   --password-green: #5DEF92;
-  --hr-grey: #D5D4D8;
+  --hr-border: #D5D4D8;
   --background-blue: #273549;
 }
 
@@ -39,6 +39,10 @@
 
 .no-display {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -94,7 +98,7 @@ h1 {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -.01em;
-  color: var(--text-black);
+  color: var(--title-text);
 
   /* sizing and spacing */
   max-width: 354px;
@@ -120,7 +124,7 @@ label {
   justify-content: space-between;
 
   /* text style */
-  color: var(--text-black);
+  color: var(--title-text);
   font-size: 16px;
 }
 
@@ -128,9 +132,6 @@ input {
   /* sizing and spacing */
   height: 20px;
   width: 20px;
-
-  /* styling */
-  border-radius: 2px;
 }
 
 input[type="number"] {
@@ -145,6 +146,10 @@ input[type="number"] {
   font-size: 16px;
   line-height: 16px;
   text-align: center;
+}
+
+input[type="number"]:focus {
+  outline: none;
 }
 
 input[type="checkbox"] {
@@ -172,7 +177,7 @@ hr {
 
   /* styling */
   border: none;
-  border-top: 1px solid var(--hr-grey);
+  border-top: 1px solid var(--hr-border);
 }
 
 /* CONTENT SPECIFIC CLASSES */
@@ -190,7 +195,7 @@ hr {
   cursor: pointer;
 
   /* styling */
-  color:var(--text-black);
+  color:var(--title-text);
 }
 
 .tagline {
@@ -211,12 +216,21 @@ hr {
 }
 
 .error-alert {
-  color: white;
+  /* styling */
   background-color: orangered;
   border-radius: 6px;
+  padding: 0 20px;
 
   /* text style */
+  color: white;
   font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.red-border {
+  border: 2px solid orangered !important;
 }
 
 .password-containers {
