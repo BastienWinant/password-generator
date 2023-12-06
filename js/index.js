@@ -62,7 +62,7 @@ function toggleCheckbox(obj) {
 
     if (includeSpecialChars) {
       obj.classList.remove("empty-background");
-      obj.textContent = "X";
+      obj.textContent = "&#10003;";
     } else {
       obj.classList.add("empty-background");
       obj.textContent = "";
