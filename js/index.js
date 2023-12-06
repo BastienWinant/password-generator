@@ -54,15 +54,17 @@ function toggleCheckbox(obj) {
 
     if (includeNumbers) {
       obj.classList.remove("empty-background");
+      obj.textContent = "✔️";
     } else {
       obj.classList.add("empty-background");
+      obj.textContent = "";
     }
   } else if (objectID === "include-special-chars") {
     includeSpecialChars = !includeSpecialChars;
 
     if (includeSpecialChars) {
       obj.classList.remove("empty-background");
-      obj.textContent = "&#10003;";
+      obj.textContent = "✔️";
     } else {
       obj.classList.add("empty-background");
       obj.textContent = "";
